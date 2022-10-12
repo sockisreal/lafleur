@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Авторские букеты {% endblock %}
+
+{% block content %}
+    <h3 align="center">Авторские букеты</h3>
+    <ul>
+        {% comment %}{% for bouquet in bouquets %}
+            <li>{{ bouquet.title }}</li>
+            <img src="{{ bouquet.img }}" height="150">
+        {% endfor %}{% endcomment %}
+        {% for bouquet in bouquets %}
+            {% if bouquet.category_id == 1 %}
+                <li>{{ bouquet.product_name }}</li>
+                <img src="{{ bouquet.image }}" height="150">
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

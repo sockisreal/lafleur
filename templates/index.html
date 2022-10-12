@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} La Fleur {% endblock %}
+
+{% block content %}
+    <h3 align="center">Доставка букетов в Москве</h3>
+    <p align="center">Покажем ближайшие магазины и товары с актуальной ценой</p>
+    <h4>Навигация</h4>
+    <ul>
+        <li><a href="{% url 'bouquets_url' %}">Авторские букеты</a></li>
+        <li><a href="{% url 'plants_url' %}">Живые растения</a></li>
+        <li><a href="{% url 'flowers_url' %}">Поштучно</a></li>
+        <li><a href="{% url 'reasons_url' %}">Повод</a></li>
+    </ul>
+{% endblock %}

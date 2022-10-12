@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Живые растения {% endblock %}
+
+{% block content %}
+    <h3 align="center">Живые растения</h3>
+    <ul>
+        {% comment %}{% for plant in plants %}
+            <li>{{ plant.title }}</li>
+            <img src="{{ plant.img }}" height="150">
+        {% endfor %}{% endcomment %}
+        {% for plant in plants %}
+            {% if plant.category_id == 2 %}
+                <li>{{ plant.product_name }}</li>
+                <img src="{{ plant.image }}" height="150">
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

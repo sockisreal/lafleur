@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Поводы {% endblock %}
+
+{% block content %}
+    <h3 align="center">Поводы</h3>
+    <ul>
+        <li><a href="{% url 'birthday_url' %}">День рождения</a></li>
+        <li><a href="{% url 'wedding_url' %}">Свадьба</a></li>
+    </ul>
+{% endblock %}

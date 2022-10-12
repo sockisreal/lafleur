@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} День рождения {% endblock %}
+
+{% block content %}
+    <h3 align="center">День рождения</h3>
+    <ul>
+        {% comment %}{% for i in bd %}
+            <li>{{ i.title }}</li>
+            <img src="{{ i.img }}" height="150">
+        {% endfor %}{% endcomment %}
+        {% for i in bd %}
+            {% if i.category_id == 4 %}
+                <li>{{ i.product_name }}</li>
+                <img src="{{ i.image }}" height="150">
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
